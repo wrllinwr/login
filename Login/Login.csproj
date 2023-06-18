@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="2.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B856EDB-8300-4AB3-8C43-EA7A85743D53}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SFL</RootNamespace>
+    <AssemblyName>login</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Resources\lin.ico</ApplicationIcon>
+    <TargetFrameworkProfile />
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <SignAssembly>False</SignAssembly>
+    <DelaySign>False</DelaySign>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <RunCodeAnalysis>False</RunCodeAnalysis>
+    <SourceAnalysisOverrideSettingsFile>C:\Users\wrl\AppData\Roaming\ICSharpCode\SharpDevelop5\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>..\..\..\..\..\..\天堂生存呐喊\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>x86</PlatformTarget>
+    <RegisterForComInterop>False</RegisterForComInterop>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>bin\Debug\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZipClass">
+      <HintPath>bin\Debug\ZipClass.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BabyWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BigInteger.cs" />
+    <Compile Include="BitmapRegion.cs" />
+    <Compile Include="Crc32.cs" />
+    <Compile Include="data\crypt\EncryptForC.cs" />
+    <Compile Include="data\crypt\EncryptForS.cs" />
+    <Compile Include="data\crypt\exception\ClientIdExist.cs" />
+    <Compile Include="data\crypt\exception\NoKeySelected.cs" />
+    <Compile Include="data\crypt\exception\NoSuchClientId.cs" />
+    <Compile Include="data\crypt\LinBlowfish.cs" />
+    <Compile Include="data\crypt\LineageKeys.cs" />
+    <Compile Include="data\crypt\LinEncrypt.cs" />
+    <Compile Include="data\crypt\PrintPacket.cs" />
+    <Compile Include="data\crypt\UByte8.cs" />
+    <Compile Include="data\crypt\UChar8.cs" />
+    <Compile Include="data\crypt\ULong32.cs" />
+    <Compile Include="data\packet\BasePacket.cs" />
+    <Compile Include="data\packet\client\C_Attack.cs" />
+    <Compile Include="data\packet\client\C_AttackBow.cs" />
+    <Compile Include="data\packet\client\C_LoginToServer.cs" />
+    <Compile Include="data\packet\client\C_MoveChar.cs" />
+    <Compile Include="data\packet\client\C_ChangeChar.cs" />
+    <Compile Include="data\packet\client\C_UseSkill.cs" />
+    <Compile Include="data\packet\PacketClient.cs" />
+    <Compile Include="data\packet\OpLoad.cs" />
+    <Compile Include="data\packet\PacketServer.cs" />
+    <Compile Include="data\packet\server\S_ChangeShape.cs" />
+    <Compile Include="data\packet\server\S_CharList.cs" />
+    <Compile Include="data\packet\server\S_CharVisualUpdate.cs" />
+    <Compile Include="data\packet\server\S_Disconnect.cs" />
+    <Compile Include="data\packet\server\S_Liquor.cs" />
+    <Compile Include="data\packet\server\S_MoveCharPacket.cs" />
+    <Compile Include="data\packet\server\S_NewCharPacket.cs" />
+    <Compile Include="data\packet\server\S_OwnCharPacks.cs" />
+    <Compile Include="data\packet\server\S_OwnCharStatus.cs" />
+    <Compile Include="data\packet\server\S_ServerMessage.cs" />
+    <Compile Include="data\packet\server\S_SkillBrave.cs" />
+    <Compile Include="data\packet\server\S_SkillHaste.cs" />
+    <Compile Include="data\plugin\ActionCode.cs" />
+    <Compile Include="data\plugin\AntiBotData.cs" />
+    <Compile Include="data\plugin\SpeedCheck.cs" />
+    <Compile Include="data\plugin\SprData.cs" />
+    <Compile Include="data\plugin\StringTokenizer.cs" />
+    <Compile Include="data\plugin\Util.cs" />
+    <Compile Include="data\temp\AllSave.cs" />
+    <Compile Include="data\temp\UserPc.cs" />
+    <Compile Include="data\thread\DisConTime.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ini.cs" />
+    <Compile Include="Lineage.cs" />
+    <Compile Include="Memory.cs" />
+    <Compile Include="PingClass.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Setting.cs" />
+    <Compile Include="UpdateInfo.cs" />
+    <Compile Include="Win32API.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
